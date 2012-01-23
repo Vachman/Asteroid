@@ -3,7 +3,7 @@ ActiveAdmin.register Device do
   
   scope :all, :default => true
   scope "В наличии", :avaliable
-  scope "Установлено клиентам", :notavaliable
+  scope "Установлено клиентам", :unavaliable
   
   filter :model, :label => "Модель"
   filter :name, :label => "Серийному номеру"
@@ -22,6 +22,7 @@ ActiveAdmin.register Device do
       row("Модель") { device.device_type.name }
       row("Серийный номер") { device.name }
       (row("Установлен клиенту") { device.client.name }) if device.client_id != nil
+      #(row("Номер телефона") { device.client.phone.number }) if device.client 
     end
   end
   
