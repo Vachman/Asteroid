@@ -31,9 +31,9 @@ ActiveAdmin.register DeviceType do
   form do |f|
     f.inputs do
       f.input :name, :label => "Модель"
-      f.input :fxs, :label => "Количество линий"
-      f.input :lan, :label => "Количество ethernet портов"
-      f.input :protocol, :label => "Протокол", :as => :select,      :collection => ["SIP", "h.323", "E1"]
+      f.input :fxs, :label => "Количество линий", :as => :select, :collection => ["2", "4", "8", "30"]
+      f.input :lan, :label => "Количество ethernet портов", :as => :select, :collection => ["1", "4"]
+      f.input :protocol, :label => "Протокол", :as => :select, :collection => ["SIP", "h.323", "E1"]
       f.input :router, :label => "Маршрутизатор"
       f.input :wifi, :label => "Наличие Wi-Fi"
     end
