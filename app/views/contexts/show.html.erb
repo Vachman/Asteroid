@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<h2><%= @context.name %></h2>
+
+<table>
+	<thead>
+		<tr>
+			<th>Extension</th>
+			<th>Priority</th>
+			<th>App</th>
+			<th>AppData</th>
+		</tr>
+	</thead>
+	<tbody>	
+			<%= render @context.context_rules %>
+	</tbody>
+</table>
+
+<br />
+<h2>Add rule</h2>
+<%= render "context_rules/form" %>
+<br />
+<%= link_to 'Edit', edit_context_path(@context) %> |
+<%= link_to 'Back', contexts_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Coe:</b>
+  <%= @phone_code.coe %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%= @phone_code.region_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_phone_code_path(@phone_code) %> |
+<%= link_to 'Back', phone_codes_path %>

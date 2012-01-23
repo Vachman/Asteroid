@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asteroid</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+</head>
+
+  <%= csrf_meta_tag %>
+<body>
+	<div id="container">
+			<%# if user_signed_in? %>
+				<div id="usernav" style="float: right;">
+					<%#= link_to current_user.email, edit_user_registration_path(current_user) %> |
+					<%#= link_to "Выйти", destroy_user_session_path, :method => :delete  %>
+				</div>
+				<div>
+					<%#= link_to "Линии", sip_accounts_path %> | 
+					<%#= link_to "Клиенты", clients_path %> | 
+					<%#= link_to "Контексты", contexts_path %> |
+					<%#= link_to "Аварийное сообщение", "#" %>
+				</div>
+			<% end %>
+     <p class="otice"><%=  %></p>
+     <p class="alert"><%= alert %></p>
+     <%= yield %>
+  </div>
+</body>
+</html>

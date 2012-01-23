@@ -1,0 +1,10 @@
+<tr>
+	<td><%= context_rule.exten %></td>
+	<td><%= context_rule.priority %></td>
+	<td><%= context_rule.app %></td>
+	<td><%= context_rule.appdata %></td>
+	<td><%= link_to "Удалить", [context_rule.context, context_rule],
+		 :confirm => 'Are you sure?',
+		 :method => :delete  %>
+	</td>
+</tr>

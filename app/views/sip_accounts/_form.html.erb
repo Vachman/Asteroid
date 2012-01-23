@@ -1,0 +1,84 @@
+<%= form_for(@sip_account) do |f| %>
+  <% if @sip_account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sip_account.errors.count, "error") %> prohibited this sip_account from being saved:</h2>
+
+      <ul>
+      <% @sip_account.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div id="common">
+  <%= f.label :name, "Sip name" %><br />
+	<%= f.text_field :name %>
+	<br />
+	<%= f.label :context, "Контекст" %><br />
+	<%= f.text_field :context %>
+	<br />
+	<%= f.label :secret, "Пароль" %><br />
+	<%= f.text_field :secret %>
+	<br />
+	<br />
+	<%= link_to "Подробнее", "#", :onclick => "$('#advanced').slideToggle('slow')" %>
+	
+	<div class="actions">
+		<br/>
+    <%= f.submit "Ok" %>
+  </div>
+	
+	</div>
+
+	<div id="advanced">
+		<div class="left">
+			<%= f.label :account_type, "Тип" %>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<%= f.label :dtmfmode, "DTMF" %>
+			<br />
+			<%= f.select(:account_type,  { "Friend" => "friend", "Peer" => "peer", "User" => "user"}, :selected => "friend" )%>
+			&nbsp;
+			<%= f.select(:dtmfmode, { "Auto" => "auto", "Inband" => "inband", "RFC-2833" => "rfc2833"})%>
+			<br />
+			<br />
+			<%= f.label :deny, "Deny" %><br />
+			<%= f.text_field :deny %>
+			<br />
+			<%= f.label :permit, "Permit" %><br />
+			<%= f.text_field :permit %>
+			<br />
+			<%= f.label :host, "Host" %><br />
+			<%= f.text_field :host %>
+			<br />
+			<%= f.label :client, "client" %><br />
+			<%= f.select :client_id,@clients.collect{|c| [c.name, c.id]},:default => "2" %>
+			<br />
+		</div>
+		<div class="right">		
+			<%= f.label :allow, "Allow" %><br />
+			<%= f.text_field :allow %>
+			<br />
+		  <%= f.label :disallow, "Disallow" %><br />
+			<%= f.text_field :disallow %>
+			<br />
+			<%= f.label :call_limit, "Call-limit" %><br />
+			<%= f.text_field :call_limit %>
+			<br />
+			<%= f.label :callgroup, "Callgroup" %><br />
+			<%= f.text_field :callgroup %>
+			<br />
+			<%= f.label :pickupgroup, "Pickupgroup" %><br />
+			<%= f.text_field :pickupgroup %>
+			<br />
+			<%= f.label :qualify, "Qualify" %>
+		  <%= f.select(:qualify,  { "Yes" => "5000", "No" => "no"}, :selected => "yes" )%>
+			&nbsp;
+			<%= f.label :nat, "Nat" %>
+		  <%= f.select(:nat,  { "Yes" => "yes", "No" => "no"}, :selected => "yes" )%>
+			<br />
+	  </div>
+	</div>	
+  
+
+
+<% end %>

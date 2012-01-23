@@ -1,0 +1,31 @@
+<h1>Listing context_rules</h1>
+
+<table>
+  <tr>
+    <th>Context</th>
+    <th>Exten</th>
+    <th>Priority</th>
+    <th>App</th>
+    <th>Appdata</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @context_rules.each do |context_rule| %>
+  <tr>
+    <td><%= context_rule.context %></td>
+    <td><%= context_rule.exten %></td>
+    <td><%= context_rule.priority %></td>
+    <td><%= context_rule.app %></td>
+    <td><%= context_rule.appdata %></td>
+    <td><%= link_to 'Show', context_rule %></td>
+    <td><%= link_to 'Edit', edit_context_rule_path(context_rule) %></td>
+    <td><%= link_to 'Destroy', context_rule, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Context rule', new_context_rule_path %>

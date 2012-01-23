@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Context:</b>
+  <%= @context_rule.context %>
+</p>
+
+<p>
+  <b>Exten:</b>
+  <%= @context_rule.exten %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @context_rule.priority %>
+</p>
+
+<p>
+  <b>App:</b>
+  <%= @context_rule.app %>
+</p>
+
+<p>
+  <b>Appdata:</b>
+  <%= @context_rule.appdata %>
+</p>
+
+
+<%= link_to 'Edit', edit_context_rule_path(@context_rule) %> |
+<%= link_to 'Back', context_rules_path %>

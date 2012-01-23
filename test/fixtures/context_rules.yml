@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  context: 
+  exten: MyString
+  priority: 1
+  app: MyString
+  appdata: MyString
+
+two:
+  context: 
+  exten: MyString
+  priority: 1
+  app: MyString
+  appdata: MyString

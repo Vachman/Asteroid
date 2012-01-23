@@ -1,0 +1,23 @@
+<h1>Listing directions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @directions.each do |direction| %>
+  <tr>
+    <td><%= direction.name %></td>
+    <td><%= link_to 'Show', direction %></td>
+    <td><%= link_to 'Edit', edit_direction_path(direction) %></td>
+    <td><%= link_to 'Destroy', direction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Direction', new_direction_path %>

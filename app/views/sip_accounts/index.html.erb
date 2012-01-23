@@ -1,0 +1,113 @@
+<%= javascript_include_tag "jquery.qtip" %>
+<%= stylesheet_link_tag "jquery.qtip" %>
+
+<script type="text/javascript">
+		
+		$(document).ready(function() {
+			oTable = $('#accounts').dataTable({
+					"bJQueryUI": true,
+					"bPaginate": false,
+					"bInfo": true,
+					"aoColumns": [
+		                        { "bSortable": false },
+		                        null,
+		                        null,
+														null,
+														null,
+														{ "bSortable": false },
+		                        { "bSortable": false }
+		                            ],
+           "bLengthChange": true,
+           "sScrollY": "100px"
+			});
+			
+			// Table autoheight
+			var rollheight = $("body").height()-245+'px';
+      $(".dataTables_scrollBody").height(rollheight); 			
+			$(".info").each( function(){
+								var relLink = $(this).attr("rel");
+								$(this).qtip({
+								   content: {
+										text: 'Загрузка',
+								      	ajax: {
+								         	url: relLink,
+										 	type: 'GET'
+								      	}
+								    }
+								 });
+							 });
+		
+			//Переход на ссылку при нажатии action у которого есть rel
+			$(".action[rel]").click(function(){
+				document.location.href = $(this).attr('rel');
+			});
+		});
+</script>
+
+<h1>Линии</h1>
+
+
+<div id="newsip">
+	<%= link_to ' Новый пользователь ', new_sip_account_path %>
+</div>
+<br />
+<div id="dt_accounts">
+			<table id="accounts" class="data-table">
+			  <thead>
+			  	<tr>
+						<th></th>
+				    <th>Имя</th>
+				    <th>Клиент</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+			  </thead>
+
+<!--				<tfoot>
+					<tr>
+						<th></th>
+				    <th>Имя</th>
+				    <th>Контекст</th>
+				    <th>Клиент</th>
+						<th></th>
+						<th></th>
+						<th></th>
+					 </tr>
+				</tfoot>
+-->
+
+				<tbody>
+					<% @sip_accounts.each do |sip_account| %>
+					  <tr class="buddie" >
+							<td rel='<%= sip_account_path(sip_account) %>'style='width: 24px;' class='info'> 
+								<center><%= image_tag "info.png" %></center>
+							</td>
+						  <td><%= sip_account.name %></td>
+							<td><%= sip_account.client ? sip_account.client.name : "-" %></td>
+						
+						<% if sip_account.locked? %>
+							<td class="locked">locked <%= toggle_lock_path(sip_account) %></td>
+						<% else %>
+							<td class="unlocked">unlocked</td>
+						<% end %>
+				
+						<% if sip_account.available? && sip_account.turn_on?  %>
+							<td class="online action" rel="<%=toggle_on_off_path(sip_account)%>">online</td>
+						<% elsif !sip_account.available? && sip_account.turn_on?  %>
+				  		<td class="unavailable action" rel="<%=toggle_on_off_path(sip_account)%>">unavailable</td>
+						<% else %>
+							<td class="offline action" rel="<%=toggle_on_off_path(sip_account)%>">offline</td>
+						<% end %>	 		
+										
+					   <td class="action"><%= link_to image_tag("edit.png"), edit_sip_account_path(sip_account) %></td>
+					   <td class="action"><%= link_to image_tag("delete.png"), sip_account, :confirm => 'Вы уверены?', :method => :delete%></td>
+					  </tr>
+					<% end %>
+				</tbody>
+			</table>
+</div>
+
+
+

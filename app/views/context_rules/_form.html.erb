@@ -1,0 +1,21 @@
+<%= form_for([@context, @context.context_rules.build]) do |f| %>
+  <div class="field">
+    <%= f.label :exten %><br />
+    <%= f.text_field :exten %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :app %><br />
+    <%= f.text_field :app %>
+  </div>
+  <div class="field">
+    <%= f.label :appdata %><br />
+    <%= f.text_field :appdata %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
