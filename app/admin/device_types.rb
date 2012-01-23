@@ -12,6 +12,7 @@ ActiveAdmin.register DeviceType do
   index do
     column ("Модель"), :name
     column ("В наличии"), :avaliable
+    column ("Стоимость"), :price
     default_actions
   end
   
@@ -22,8 +23,7 @@ ActiveAdmin.register DeviceType do
       row("Функции роутера") { device_type.router ? "Есть" : "Нет" }
 
       (row("Wi-Fi") { device_type.wifi ? "Есть" : "Нет" }) if device_type.router == true
-      row("В наличии") { device_type.avaliable }
-      
+      row("В наличии") { device_type.avaliable }      
     end
   end
   
@@ -36,6 +36,7 @@ ActiveAdmin.register DeviceType do
       f.input :protocol, :label => "Протокол", :as => :select, :collection => ["SIP", "h.323", "E1"]
       f.input :router, :label => "Маршрутизатор"
       f.input :wifi, :label => "Наличие Wi-Fi"
+      f.input :price, :label => "Стоимость"
     end
     f.buttons
   end

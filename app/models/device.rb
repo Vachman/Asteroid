@@ -3,7 +3,7 @@ class Device < ActiveRecord::Base
   belongs_to :client
   
   
-  def avaliable
-    self.name
+  def model
+    self.device_type.name
   end
 end

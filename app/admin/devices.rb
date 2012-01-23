@@ -3,7 +3,8 @@ ActiveAdmin.register Device do
   menu :label => "Оборудование", :priority => 1
   
   index do
-    column :name
+    column "Модель", :model 
+    column "Серийный номер", :name
     
     default_actions
   end

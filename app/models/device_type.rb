@@ -5,5 +5,4 @@ class DeviceType < ActiveRecord::Base
   def avaliable
     self.devices.where('client_id is ?',nil).count
   end
-  
 end
