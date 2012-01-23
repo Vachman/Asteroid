@@ -6,4 +6,6 @@ class Device < ActiveRecord::Base
   def model
     self.device_type.name
   end
+  scope :avaliable,   where('client_id is ?', nil)
+  scope :notavaliable,  where("client_id != 'NULL'")
 end

@@ -23,7 +23,9 @@ ActiveAdmin.register DeviceType do
       row("Функции роутера") { device_type.router ? "Есть" : "Нет" }
 
       (row("Wi-Fi") { device_type.wifi ? "Есть" : "Нет" }) if device_type.router == true
-      row("В наличии") { device_type.avaliable }      
+      row("В наличии") { device_type.avaliable }
+      row("Установлено абонентам") { device_type.unavaliable }
+      row("Стоимость (рублей)")  { device_type.price }    
     end
   end
   

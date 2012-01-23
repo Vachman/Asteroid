@@ -5,4 +5,7 @@ class DeviceType < ActiveRecord::Base
   def avaliable
     self.devices.where('client_id is ?',nil).count
   end
+  def unavaliable
+    self.devices.where("client_id != 'NULL'").count
+  end
 end

@@ -1,5 +1,13 @@
 # encoding: utf-8
 ActiveAdmin.register Device do
+  
+  scope :all, :default => true
+  scope "В наличии", :avaliable
+  scope "Установлено клиентам", :notavaliable
+  
+  filter :model, :label => "Модель"
+  filter :name, :label => "Серийному номеру"
+  
   menu :label => "Оборудование", :priority => 1
   
   index do
