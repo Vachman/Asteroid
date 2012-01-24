@@ -2,11 +2,13 @@
 ActiveAdmin.register Record do
   menu :label => "Записи разговоров"
   
-  filter :client, :label => "По Клиенту"
-  filter :called,  :label => "По исходящему номеру телефона", :as => :select, :collection =>  Phone.where('record is true')
-  filter :calling,  :label => "По входящему номеру телефона", :as => :select, :collection =>  Phone.where('record is true')
+  #filter :client, :label => "По Клиенту", :as => :select, :collection => Client.where('phone.record is true')
+  filter :called,  :label => "По инициатору вызова"
+  filter :calling,  :label => "По назначению вызова"
+  filter :created_at, :label => "По дате"
   
   index do
+    column "Дата", :created_at
     column "Клиент", :client
     column "Направление", :name
     column "Инициатор вызова", :called
