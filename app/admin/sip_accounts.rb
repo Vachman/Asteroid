@@ -33,6 +33,7 @@ ActiveAdmin.register SipAccount do
      f.input :nat, :label => "NAT"
      f.input :call_limit, :label => "Количество линий"
    end
+   f.buttons
   end
   
   show do
