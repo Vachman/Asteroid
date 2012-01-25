@@ -6,6 +6,7 @@ ActiveAdmin.register Record do
   filter :called,  :label => "По инициатору вызова"
   filter :calling,  :label => "По назначению вызова"
   filter :created_at, :label => "По дате"
+  filter :name, :label => "По направлению", :as => :select, :collection => Record.find(:all)
   
   index do
     column "Дата", :created_at
