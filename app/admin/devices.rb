@@ -5,7 +5,7 @@ ActiveAdmin.register Device do
   scope "В наличии", :avaliable
   scope "Установлено клиентам", :unavaliable
   
-  filter :model, :label => "Модель"
+  filter :device_type_id, :label => "Модели", :as => :select, :collection => DeviceType.find(:all)
   filter :name, :label => "Серийному номеру"
   
   menu :label => "Оборудование", :priority => 1

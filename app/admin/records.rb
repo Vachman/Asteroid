@@ -8,12 +8,12 @@ ActiveAdmin.register Record do
   filter :created_at, :label => "По дате"
   
   index do
-    column "Дата", :created_at
+    #column "Дата", :created_at
     column "Клиент", :client
     column "Направление", :name
     column "Инициатор вызова", :called
     column "Назначение вызова", :calling
-    column "Детализация" do |record|
+    column "Запись" do |record|
       link_to "Скачать", record.link
     end
     
