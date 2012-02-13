@@ -1,5 +1,6 @@
 class Phone < ActiveRecord::Base
   belongs_to :client
+  belongs_to :operator
   has_many :bind_sip_accounts
   has_many :sip_accounts, :through => :bind_sip_accounts
   has_many :with_this_aon_sip_accounts, :class_name => "SipAccount", :foreign_key => "phone_id"

@@ -23,7 +23,8 @@ ActiveAdmin.register Phone do
       f.inputs do 
         f.input :client, :label => "Клиент"
         f.input :number, :label => "Номер"
-        f.input :blocked, :label => "Заблокирован"        
+        f.input :blocked, :label => "Заблокирован" 
+        f.input :operator_id, :label => "Оператор", :as => :select, :collection => Operator.find(:all)       
       end  
       f.inputs "Услуги" do
         f.input :record, :label => "Запись разговоров"
@@ -36,6 +37,7 @@ ActiveAdmin.register Phone do
       row("Номер") { phone.number }
       row("Клиент") { link_to phone.client.name, admin_client_path(phone.client) }
       row("Статус") { status_tag ( phone.blocked ? "Заблокирован" : "Активен" ), ( phone.blocked ? :error : :ok ) }
+      row("Оператор") { |operator| phone.operator.name unless phone.operator.nil? }
       table_for phone.with_this_aon_sip_accounts do |t|
         t.column("Внутренний номер") { |sip_account|  sip_account.name unless sip_account.nil? }
         t.column("Активных линий") { |sip_account|  sip_account.call_limit unless sip_account.nil? }

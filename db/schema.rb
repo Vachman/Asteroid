@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120123140255) do
+ActiveRecord::Schema.define(:version => 20120213073235) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -122,6 +122,13 @@ ActiveRecord::Schema.define(:version => 20120123140255) do
     t.string  "appdata"
   end
 
+  create_table "operators", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "connection_type"
+  end
+
   create_table "phone_codes", :force => true do |t|
     t.string   "coe"
     t.integer  "region_id"
@@ -136,6 +143,7 @@ ActiveRecord::Schema.define(:version => 20120123140255) do
     t.datetime "updated_at"
     t.boolean  "blocked"
     t.boolean  "record"
+    t.integer  "operator_id"
   end
 
   create_table "records", :force => true do |t|
