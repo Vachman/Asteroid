@@ -2,6 +2,9 @@
 ActiveAdmin.register Client do
   menu :label => "Клиенты", :priority => 1
   
+  filter :date_ot_inclusion, :label => "Дата включения"
+  #filter :off_date, :label => "Серийному номеру"
+  
   scope :all, :default => true
   scope "Люди", :people
   scope "Организации" ,:companies
@@ -9,6 +12,7 @@ ActiveAdmin.register Client do
   index do
     column "Клиент", :name
     column "Дата включения", :date_ot_inclusion
+    
     column "Дата отключения", :off_date
     default_actions
   end
