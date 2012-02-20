@@ -12,7 +12,6 @@ ActiveAdmin.register Client do
   index do
     column "Клиент", :name
     column "Дата включения", :date_ot_inclusion
-    
     column "Дата отключения", :off_date
     default_actions
   end
@@ -40,6 +39,13 @@ ActiveAdmin.register Client do
         t.column("Серийный номер") { |device| device.name }
       end
     end) unless client.devices.empty?
+    
+    panel "Включения" do
+      attributes_table do
+        row("Дата включения") { client.date_ot_inclusion }
+        row("Дата отключения") { client.off_date }
+      end
+    end
     
     active_admin_comments
   end
