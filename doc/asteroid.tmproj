@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../app/admin/devices.rb</string>
+	<string>../app/admin/operator_contacts.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -40,30 +40,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>9</integer>
 				<key>line</key>
-				<integer>21</integer>
+				<integer>27</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>1</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>36</integer>
-				<key>line</key>
-				<integer>28</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>4</integer>
-				<key>line</key>
-				<integer>21</integer>
-			</dict>
 		</dict>
 		<key>../app/admin/dashboards.rb</key>
 		<dict>
@@ -91,16 +75,16 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>9</integer>
 		</dict>
 		<key>../app/admin/devices.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>6</integer>
+				<integer>47</integer>
 				<key>line</key>
-				<integer>14</integer>
+				<integer>10</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -125,16 +109,60 @@
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>17</integer>
+				<integer>0</integer>
 				<key>line</key>
 				<integer>0</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>17</integer>
 				<key>line</key>
 				<integer>0</integer>
+			</dict>
+		</dict>
+		<key>../app/admin/operator_contacts.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>13</integer>
+				<key>line</key>
+				<integer>32</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../app/admin/operators.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>28</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>2</integer>
 			</dict>
 		</dict>
 		<key>../app/admin/phone_codes.rb</key>
@@ -156,9 +184,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>77</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>37</integer>
+				<integer>40</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
@@ -169,16 +197,16 @@
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>35</integer>
+				<integer>96</integer>
 				<key>line</key>
-				<integer>37</integer>
+				<integer>41</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>77</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>37</integer>
+				<integer>40</integer>
 			</dict>
 		</dict>
 		<key>../app/admin/records.rb</key>
@@ -237,7 +265,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<key>../app/controllers/context_rules_controller.rb</key>
 		<dict>
@@ -323,20 +351,6 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>../app/controllers/sip_accounts_controller.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>8</integer>
-		</dict>
 		<key>../app/models/admin_user.rb</key>
 		<dict>
 			<key>caret</key>
@@ -416,26 +430,10 @@
 				<key>line</key>
 				<integer>3</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>40</integer>
-				<key>line</key>
-				<integer>3</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>2</integer>
-				<key>line</key>
-				<integer>3</integer>
-			</dict>
 		</dict>
 		<key>../app/models/device_type.rb</key>
 		<dict>
@@ -465,14 +463,42 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../app/models/operator.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../app/models/operator_contact.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>42</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../app/models/phone.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>66</integer>
+				<integer>22</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>2</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -626,14 +652,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>4</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>2</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>42</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>4</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
 		</dict>
 		<key>../db/migrate/20120120141624_create_device_types.rb</key>
 		<dict>
@@ -751,6 +793,62 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../db/migrate/20120213070501_create_operators.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>5</integer>
+				<key>line</key>
+				<integer>8</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../db/migrate/20120213073235_add_operator_to_phones.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>46</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../db/migrate/20120213083010_create_contacts.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>14</integer>
+				<key>line</key>
+				<integer>6</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../db/migrate/20120213083204_create_operator_contacts.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>50</integer>
+				<key>line</key>
+				<integer>11</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../public/stylesheets/jquery-ui-1.8.11.custom.css</key>
 		<dict>
 			<key>caret</key>
@@ -775,10 +873,17 @@
 		<string>../app/admin/phone_codes.rb</string>
 		<string>../app/admin/clients.rb</string>
 		<string>../app/models/phone.rb</string>
-		<string>../app/admin/phones.rb</string>
-		<string>../app/controllers/sip_accounts_controller.rb</string>
+		<string>../db/migrate/20120213083204_create_operator_contacts.rb</string>
+		<string>../app/models/operator_contact.rb</string>
 		<string>../app/models/device.rb</string>
+		<string>../app/admin/phones.rb</string>
+		<string>../app/admin/operator_contacts.rb</string>
 		<string>../app/admin/devices.rb</string>
+		<string>../db/migrate/20120213070501_create_operators.rb</string>
+		<string>../app/models/operator.rb</string>
+		<string>../app/admin/operators.rb</string>
+		<string>../db/migrate/20120213083010_create_contacts.rb</string>
+		<string>../db/migrate/20120213073235_add_operator_to_phones.rb</string>
 		<string>../db/migrate/20120123140255_create_records.rb</string>
 		<string>../app/models/record.rb</string>
 		<string>../db/migrate/20120120141624_create_device_types.rb</string>

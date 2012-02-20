@@ -8,6 +8,8 @@ ActiveAdmin.register Client do
   
   index do
     column "Клиент", :name
+    column "Дата включения", :date_ot_inclusion
+    column "Дата отключения", :off_date
     default_actions
   end
 
@@ -42,6 +44,8 @@ ActiveAdmin.register Client do
     f.inputs do 
       f.input :name, :label => ( f.object.company ? "Организация" : "ФИО" )
       f.input :company, :label => "Организация"
+      f.input :date_ot_inclusion, :label => "Дата включения"
+      f.input :off_date, :label => "Дата отключения"
     end  
     f.buttons
   end  

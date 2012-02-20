@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120213073235) do
+ActiveRecord::Schema.define(:version => 20120220071550) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -66,6 +66,13 @@ ActiveRecord::Schema.define(:version => 20120213073235) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "company"
+    t.datetime "date_ot_inclusion"
+    t.datetime "off_date"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "context_rules", :force => true do |t|
@@ -120,6 +127,18 @@ ActiveRecord::Schema.define(:version => 20120213073235) do
     t.string  "priority"
     t.string  "app"
     t.string  "appdata"
+  end
+
+  create_table "operator_contacts", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "support_mail"
+    t.string   "support_phone"
+    t.string   "manager_mail"
+    t.string   "manager_phone"
+    t.string   "our_manager_id"
+    t.string   "agreement_id"
   end
 
   create_table "operators", :force => true do |t|
