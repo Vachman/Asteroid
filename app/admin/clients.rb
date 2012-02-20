@@ -41,7 +41,7 @@ ActiveAdmin.register Client do
     end) unless client.devices.empty?
     
     panel "Включения" do
-      attributes_table do
+      attributes_table_for client do
         row("Дата включения") { client.date_ot_inclusion }
         row("Дата отключения") { client.off_date }
       end
