@@ -3,7 +3,6 @@ ActiveAdmin.register Client do
   menu :label => "Клиенты", :priority => 1
   
   filter :date_ot_inclusion, :label => "Дата включения"
-  #filter :off_date, :label => "Серийному номеру"
   
   scope :all, :default => true
   scope "Люди", :people
@@ -29,6 +28,9 @@ ActiveAdmin.register Client do
         t.column("Номер") { |phone| link_to phone.number, admin_phone_path(phone) }
         t.column("Статус") do |phone|
            status_tag ( phone.blocked ? "Заблокирован" : "Активен" ), ( phone.blocked ? :error : :ok )
+        end
+        t.column("Запись") do |phone|
+           status_tag ( phone.blocked ? "Включена" : "Выключена" ), ( phone.blocked ? :ok : :error )
         end
       end
     end) unless client.phones.empty?
@@ -58,5 +60,6 @@ ActiveAdmin.register Client do
       f.input :off_date, :label => "Дата отключения"
     end  
     f.buttons
-  end  
+  end
+        
 end
