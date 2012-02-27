@@ -2,6 +2,7 @@
 ActiveAdmin.register Client do
   menu :label => "Клиенты", :priority => 1
   
+  filter :name, :label => "Имя"
   filter :date_ot_inclusion, :label => "Дата включения"
   
   scope :all, :default => true
