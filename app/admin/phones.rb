@@ -35,7 +35,7 @@ ActiveAdmin.register Phone do
   show do
     attributes_table do
       row("Номер") { phone.number }
-      row("Клиент") { link_to phone.client.name, admin_client_path(phone.client) }
+      (row("Клиент") { link_to phone.client.name, admin_client_path(phone.client) }) unless phone.client.nil?
       row("Статус") { status_tag ( phone.blocked ? "Заблокирован" : "Активен" ), ( phone.blocked ? :error : :ok ) }
       row("Оператор") { |operator| phone.operator.name unless phone.operator.nil? }
       table_for phone.with_this_aon_sip_accounts do |t|
