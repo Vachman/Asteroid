@@ -38,7 +38,7 @@ ActiveAdmin.register Client do
     
     (panel "Устройства" do
       table_for client.devices do |t|
-        t.column("Модель") { |device| device.device_type.name }
+        t.column("Модель") { |device| link_to device.device_type.name, admin_device_type_path(device.device_type) }
         t.column("Серийный номер") { |device| device.name }
       end
     end) unless client.devices.empty?

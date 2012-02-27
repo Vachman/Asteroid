@@ -38,6 +38,11 @@ ActiveAdmin.setup do |config|
   # This setting changes the method which Active Admin calls
   # within the controller.
   config.authentication_method = :authenticate_admin_user!
+  # config.authentication_method = :authenticate_domain_admin!
+    
+   # def authenticate_domain_admin! 
+   #    redirect_to root_path unless signed_in? && current_user.admin? 
+   #  end
 
 
   # == Current User

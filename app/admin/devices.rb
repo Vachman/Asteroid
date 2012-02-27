@@ -19,9 +19,9 @@ ActiveAdmin.register Device do
   
   show do
     attributes_table_for device do
-      row("Модель") { device.device_type.name }
+      row("Модель") { link_to device.device_type.name, admin_device_type_path(device.device_type) }
       row("Серийный номер") { device.name }
-      (row("Установлен клиенту") { device.client.name }) if device.client_id != nil
+      (row("Установлен клиенту") { link_to device.client.name, admin_client_path(device.client) }) if device.client_id != nil
       #(row("Номер телефона") { device.client.phone.number }) if device.client 
     end
   end

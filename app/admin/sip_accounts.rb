@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register SipAccount do
-  menu :label => "Номера", :priority => 1
+  menu :label => "SIP-аккаунты", :parent => "Номера", :priority => 2
   
   scope :all, :default => true 
   scope "Доступные", :available
