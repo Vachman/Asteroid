@@ -16,4 +16,6 @@ class Phone < ActiveRecord::Base
   
   scope :blocked, where('blocked = true')
   scope :active, where("blocked = false OR blocked = '' ")
+  scope :ordered, where('ordered = true')
+  scope :notordered, where("ordered = false OR ordered = '' ")
 end

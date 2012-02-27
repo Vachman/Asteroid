@@ -5,10 +5,12 @@ ActiveAdmin.register Phone do
   scope :all, :default => true
   scope "Используемые", :active
   scope "Неиспользуемые", :blocked
+  scope "Активированные оператором", :ordered
+  scope "Требующие активации", :notordered
   
-  filter :client, :label => "Клиент"
+  filter :client, :label => "Клиенту"
+  filter :operator_id, :label => "Оператору", :as => :select, :collection => Operator.find(:all)
   filter :number, :label => "Номеру"
-  filter :ordered, :label => "Активирован оператором"
 
   index do 
     column :number
