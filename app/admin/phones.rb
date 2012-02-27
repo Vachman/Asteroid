@@ -28,7 +28,7 @@ ActiveAdmin.register Phone do
         f.input :client, :label => "Клиент"
         f.input :number, :label => "Номер"
         f.input :blocked, :label => "Заблокирован"
-        f.input :ordered, :label => "Активирован оператором", :as => :select
+        f.input :ordered, :label => "Активирован оператором"
         f.input :reserved, :label => "Забронирован клиентом"
         f.input :operator_id, :label => "Оператор", :as => :select, :collection => Operator.find(:all)       
       end  
