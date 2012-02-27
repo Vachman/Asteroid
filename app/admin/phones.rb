@@ -8,7 +8,7 @@ ActiveAdmin.register Phone do
   
   filter :client, :label => "Клиент"
   filter :number, :label => "Номеру"
-  filter :ordered, :label => "Активирован оператором", :as => :select
+  filter :ordered, :label => "Активирован оператором"
 
   index do 
     column :number
