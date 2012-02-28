@@ -11,4 +11,8 @@ class Device < ActiveRecord::Base
   scope :avaliable,   where('client_id is ?', nil)
   scope :unavaliable,  where("client_id != 'NULL'")
   
+  def avaliability
+    client_id == nil
+  end
+  
 end

@@ -13,9 +13,10 @@ ActiveAdmin.register Device do
   index do
     column "Модель", :model 
     column "Серийный номер", :name
-    column "Свободен" do |device|
-       status_tag ( device.client_id ? "Занят" : "Свободен" ), ( device.client_id ? :warning : :ok )
-    end
+    column "Доступность", :avaliability
+    #column "Свободен" do |device|
+    #   status_tag ( device.client_id ? "Занят" : "Свободен" ), ( device.client_id ? :warning : :ok )
+    #end
     default_actions
   end
   

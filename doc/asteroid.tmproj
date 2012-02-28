@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../app/admin/operators.rb</string>
+	<string>../app/models/device_type.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -82,14 +82,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>85</integer>
+				<integer>23</integer>
 				<key>line</key>
-				<integer>28</integer>
+				<integer>15</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>../app/admin/directions.rb</key>
 		<dict>
@@ -205,6 +205,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../app/controllers/application_controller.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../app/controllers/context_rules_controller.rb</key>
 		<dict>
 			<key>caret</key>
@@ -289,6 +303,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../app/models/ability.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>5</integer>
+				<key>line</key>
+				<integer>12</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../app/models/admin_user.rb</key>
 		<dict>
 			<key>caret</key>
@@ -364,14 +392,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>51</integer>
+				<integer>6</integer>
 				<key>line</key>
-				<integer>11</integer>
+				<integer>13</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
 		</dict>
 		<key>../app/models/device_type.rb</key>
 		<dict>
@@ -515,6 +559,76 @@
 				<integer>49</integer>
 			</dict>
 		</dict>
+		<key>../app/views/clients/_form.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../app/views/clients/edit.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../app/views/clients/index.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../app/views/clients/new.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../app/views/clients/show.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../config/application.rb</key>
 		<dict>
 			<key>caret</key>
@@ -527,7 +641,21 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>27</integer>
+			<integer>0</integer>
+		</dict>
+		<key>../config/boot.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>../config/deploy.rb</key>
 		<dict>
@@ -541,7 +669,21 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>14</integer>
+			<integer>0</integer>
+		</dict>
+		<key>../config/environment.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>../config/environments/development.rb</key>
 		<dict>
@@ -583,9 +725,121 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>12</integer>
+			<integer>72</integer>
+		</dict>
+		<key>../config/initializers/backtrace_silencers.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../config/initializers/devise.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>174</integer>
+		</dict>
+		<key>../config/initializers/inflections.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../config/initializers/mime_types.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../config/initializers/secret_token.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../config/initializers/session_store.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../config/locales/devise.en.yml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>../config/locales/en.yml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../config/routes.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -897,7 +1151,10 @@
 		<string>../app/admin/regions.rb</string>
 		<string>../app/admin/records.rb</string>
 		<string>../config/deploy.rb</string>
+		<string>../config/environment.rb</string>
 		<string>../config/initializers/active_admin.rb</string>
+		<string>../config/locales/devise.en.yml</string>
+		<string>../config/initializers/backtrace_silencers.rb</string>
 		<string>../config/locales/en.yml</string>
 		<string>../app/admin/phone_codes.rb</string>
 		<string>../app/admin/clients.rb</string>
@@ -906,6 +1163,12 @@
 		<string>../app/models/device.rb</string>
 		<string>../app/admin/phones.rb</string>
 		<string>../app/admin/devices.rb</string>
+		<string>../config/initializers/devise.rb</string>
+		<string>../config/initializers/inflections.rb</string>
+		<string>../config/initializers/mime_types.rb</string>
+		<string>../config/initializers/secret_token.rb</string>
+		<string>../config/initializers/session_store.rb</string>
+		<string>../config/routes.rb</string>
 		<string>../db/migrate/20120227193017_add_mac_to_devices.rb</string>
 		<string>../db/migrate/20120213070501_create_operators.rb</string>
 		<string>../app/models/operator.rb</string>
@@ -938,6 +1201,7 @@
 		<string>../app/models/region.rb</string>
 		<string>../app/admin/sip_accounts.rb</string>
 		<string>../app/models/admin_user.rb</string>
+		<string>../app/models/ability.rb</string>
 		<string>../app/models/sip_account.rb</string>
 		<string>../app/models/context.rb</string>
 		<string>../app/models/context_rule.rb</string>
@@ -945,6 +1209,13 @@
 		<string>../config/environments/development.rb</string>
 		<string>../config/environments/production.rb</string>
 		<string>../config/application.rb</string>
+		<string>../app/views/clients/_form.html.erb</string>
+		<string>../app/views/clients/edit.html.erb</string>
+		<string>../app/views/clients/index.html.erb</string>
+		<string>../app/views/clients/new.html.erb</string>
+		<string>../app/views/clients/show.html.erb</string>
+		<string>../app/controllers/application_controller.rb</string>
+		<string>../config/boot.rb</string>
 		<string>../db/migrate/20111110140152_add_blocked_to_phones.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>

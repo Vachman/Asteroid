@@ -3,28 +3,15 @@ ActiveAdmin.register Operator do
   menu :label => "Операторы"
   
   index do
-    column "Название", :name
+    column "Название" do |operator|
+      link_to operator.name, admin_operator_path(operator)
+    end
    column "Тип стыка", :connection_type
-    
-    default_actions
   end
   
-  
-#  index :as => :block do |operator|
-#      div :for => operator do
-#        h3 link_to operator.name, admin_operator_path(operator) 
-#            div do 
-#              table do
-#                column :name 
-#                column :connection_type
-#              end
-#            end
-#          end
-#        end
-  
   show do
+    h2 operator.name
     attributes_table do
-      row("Название") { operator.name }
       row("Тип стыка") { operator.connection_type }
       row("Телефон отдела продаж") { operator.sales_phone }
       row("Почта отдела продаж") { operator.sales_mail }
