@@ -11,18 +11,22 @@ ActiveAdmin.register Device do
   menu :label => "Оборудование", :priority => 1
   
   index do
-    column "Модель", :model 
+    #column "Модель", :model 
+    column "Модель" do |device|
+      link_to device.model, admin_device_path(device)
+    end
     column "Серийный номер", :name
-    column "Доступность", :avaliability
+    #column "Доступность", :avaliability
     #column "Свободен" do |device|
     #   status_tag ( device.client_id ? "Занят" : "Свободен" ), ( device.client_id ? :warning : :ok )
     #end
-    default_actions
+    #default_actions
   end
   
   show do
+    h1 device.model
     attributes_table_for device do
-      row("Модель") { link_to device.device_type.name, admin_device_type_path(device.device_type) }
+      #row("Модель") { link_to device.device_type.name, admin_device_type_path(device.device_type) }
       row("Серийный номер") { device.name }
       (row("Установлен клиенту") { link_to device.client.name, admin_client_path(device.client) }) if device.client_id != nil
     end

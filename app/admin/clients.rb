@@ -10,13 +10,17 @@ ActiveAdmin.register Client do
   scope "Организации" ,:companies
   
   index do
-    column "Клиент", :name
+    #column "Клиент", :name
+    column "Клиент" do |client|
+      link_to client.name, admin_client_path(client)
+    end
     column "Дата включения", :date_ot_inclusion
     column "Дата отключения", :off_date
-    default_actions
+    #default_actions
   end
 
   show do 
+    h1 client.name
     panel "Подробности" do
        attributes_table_for client do
         row( client.company ? "Организация" : "ФИО" ) { client.name }

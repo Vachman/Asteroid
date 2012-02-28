@@ -10,7 +10,7 @@ ActiveAdmin.register Operator do
   end
   
   show do
-    h2 operator.name
+    h1 operator.name
     attributes_table do
       row("Тип стыка") { operator.connection_type }
       row("Телефон отдела продаж") { operator.sales_phone }
@@ -19,7 +19,10 @@ ActiveAdmin.register Operator do
       row("Почта отдела технической поддержки") { operator.support_mail }
     end
     table_for operator.phones do |t|
-      t.column("Предоставленные номера") { |phone|  phone.name unless phone.nil? }
+      t.column("Предоставленные номера") { |phone|  phone.number unless phone.nil? }
+      t.column "Активирован оператором" do |phone|
+         status_tag ( phone.ordered ? "Активирован" : "Требует активации" ), ( phone.ordered ? :ok : :error )
+      end
     end
   end
   

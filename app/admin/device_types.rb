@@ -10,15 +10,19 @@ ActiveAdmin.register DeviceType do
   menu :label => "Типы оборудования", :parent => "Оборудование", :priority => 2
   
   index do
-    column ("Модель"), :name
+    column "Модель" do |device_type|
+      link_to device_type.name, admin_device_type_path(device_type)
+    end
+    #column ("Модель"), :name
     column ("В наличии"), :avaliable
     column ("Стоимость"), :price
-    default_actions
+    #default_actions
   end
   
   show do
+    h1 device_type.name
     attributes_table_for device_type do
-      row("Модель") { device_type.name }
+      #row("Модель") { device_type.name }
       row("Количество линий") { device_type.fxs }
       row("Функции роутера") { device_type.router ? "Есть" : "Нет" }
 

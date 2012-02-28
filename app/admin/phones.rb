@@ -13,7 +13,10 @@ ActiveAdmin.register Phone do
   filter :number, :label => "Номеру"
 
   index do 
-    column :number
+   # column "Номер", :number
+    column "Номер" do |phone|
+      link_to phone.number, admin_phone_path(phone)
+    end
     column "Клиент", :client 
     column "Активирован оператором" do |phone|
        status_tag ( phone.ordered ? "Активирован" : "Требует активации" ), ( phone.ordered ? :ok : :error )
@@ -22,7 +25,7 @@ ActiveAdmin.register Phone do
        status_tag ( phone.blocked ? "Заблокирован" : "Используется" ), ( phone.blocked ? :error : :ok )
     end
     
-    default_actions
+    #default_actions
   end
   
   form do |f|
@@ -41,8 +44,9 @@ ActiveAdmin.register Phone do
   end
   
   show do
+    h1 phone.number
     attributes_table do
-      row("Номер") { phone.number }
+      #row("Номер") { phone.number }
       (row("Забронирован для") { phone.reserved }) unless phone.client
       (row("Клиент") { link_to phone.client.name, admin_client_path(phone.client) }) unless phone.client.nil?
       row("Статус") { status_tag ( phone.blocked ? "Заблокирован" : "Активен" ), ( phone.blocked ? :error : :ok ) }
