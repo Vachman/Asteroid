@@ -2,11 +2,16 @@
 ActiveAdmin.register Operator do
   menu :label => "Операторы"
   
+  filter :name, :label => "по названию"
+  filter :connection_type, :label => "по типу стыка"
+  
   index do
     column "Название" do |operator|
       link_to operator.name, admin_operator_path(operator)
     end
    column "Тип стыка", :connection_type
+   column "Отдел продаж", :sales_phone
+   column "Техническая поддержка", :support_phone
   end
   
   show do
@@ -18,12 +23,12 @@ ActiveAdmin.register Operator do
       row("Телефон отдела технической поддержки") { operator.support_phone }
       row("Почта отдела технической поддержки") { operator.support_mail }
     end
-    table_for operator.phones do |t|
-      t.column("Предоставленные номера") { |phone|  phone.number unless phone.nil? }
-      t.column "Активирован оператором" do |phone|
-         status_tag ( phone.ordered ? "Активирован" : "Требует активации" ), ( phone.ordered ? :ok : :error )
-      end
-    end
+    #table_for operator.phones do |t|
+    #  t.column("Предоставленные номера") { |phone|  phone.number unless phone.nil? }
+    #  t.column "Активирован оператором" do |phone|
+    #     status_tag ( phone.ordered ? "Активирован" : "Требует активации" ), ( phone.ordered ? :ok : :error )
+    #  end
+    #end
   end
   
   form do |f|
