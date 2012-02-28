@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120227131020) do
+ActiveRecord::Schema.define(:version => 20120227193017) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20120227131020) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "client_id"
+    t.string   "mac"
   end
 
   add_index "devices", ["device_type_id"], :name => "index_devices_on_device_type_id"
@@ -170,7 +171,7 @@ ActiveRecord::Schema.define(:version => 20120227131020) do
     t.boolean  "blocked"
     t.boolean  "record"
     t.integer  "operator_id"
-    t.integer  "ordered",     :limit => 1
+    t.boolean  "ordered"
     t.integer  "reserved"
   end
 

@@ -4,10 +4,23 @@ ActiveAdmin.register Operator do
   
   index do
     column "Название", :name
-    column "Тип стыка", :connection_type
+   column "Тип стыка", :connection_type
     
     default_actions
   end
+  
+  
+#  index :as => :block do |operator|
+#      div :for => operator do
+#        h3 link_to operator.name, admin_operator_path(operator) 
+#            div do 
+#              table do
+#                column :name 
+#                column :connection_type
+#              end
+#            end
+#          end
+#        end
   
   show do
     attributes_table do

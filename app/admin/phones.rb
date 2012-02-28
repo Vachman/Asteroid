@@ -32,7 +32,7 @@ ActiveAdmin.register Phone do
         f.input :blocked, :label => "Заблокирован"
         f.input :ordered, :label => "Активирован оператором"
         f.input :reserved, :label => "Забронирован клиентом"
-        f.input :operator_id, :label => "Оператор", :as => :select, :collection => Operator.find(:all)       
+        f.input :operator_id, :label => "Оператор", :as => :select, :collection => Operator.find(:all)
       end  
       f.inputs "Услуги" do
         f.input :record, :label => "Запись разговоров"

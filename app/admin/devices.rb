@@ -13,7 +13,9 @@ ActiveAdmin.register Device do
   index do
     column "Модель", :model 
     column "Серийный номер", :name
-    
+    column "Свободен" do |device|
+       status_tag ( device.client_id ? "Занят" : "Свободен" ), ( device.client_id ? :warning : :ok )
+    end
     default_actions
   end
   
@@ -22,7 +24,12 @@ ActiveAdmin.register Device do
       row("Модель") { link_to device.device_type.name, admin_device_type_path(device.device_type) }
       row("Серийный номер") { device.name }
       (row("Установлен клиенту") { link_to device.client.name, admin_client_path(device.client) }) if device.client_id != nil
-      #(row("Номер телефона") { device.client.phone.number }) if device.client 
+    end
+    attributes_table_for device.device_type do
+      row("Общее количество телефонных линий (FXS-порты)") { device.device_type.fxs }
+      row("Функции роутера") { device.device_type.router ? "Есть" : "Нет" }
+      (row("Wi-Fi") { device.device_type.wifi ? "Есть" : "Нет" }) if device.device_type.router == true
+      row("Количество Ethernet-портов") { device.device_type.lan }
     end
   end
   
