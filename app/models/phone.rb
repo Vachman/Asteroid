@@ -15,4 +15,8 @@ class Phone < ActiveRecord::Base
   scope :active, where("blocked = false OR blocked = '' ")
   scope :ordered, where('ordered = true')
   scope :notordered, where("ordered = false OR ordered = '' ")
+  
+  def name
+    self.number
+  end
 end

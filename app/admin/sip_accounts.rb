@@ -21,7 +21,7 @@ ActiveAdmin.register SipAccount do
   
   form do |f|
     f.inputs do
-     f.input :phone, :label => "АОН"
+     f.input :phone, :label => "АОН", :as => :select, :collection => Phone.find(:all)
      f.input :name, :label => "Имя"
      f.input :username, :label => "Логин"
      f.input :context, :label => "Контекст"

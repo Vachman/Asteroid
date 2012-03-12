@@ -20,7 +20,7 @@ ActiveAdmin.register DeviceType do
   end
   
   show do
-    h1 device_type.name
+    h2 device_type.name
     attributes_table_for device_type do
       #row("Модель") { device_type.name }
       row("Количество линий") { device_type.fxs }
