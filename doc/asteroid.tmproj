@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../app/admin/sip_accounts.rb</string>
+	<string>../config/database.yml</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -673,6 +673,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../config/database.yml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>20</integer>
+				<key>line</key>
+				<integer>28</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>3</integer>
+		</dict>
 		<key>../config/deploy.rb</key>
 		<dict>
 			<key>caret</key>
@@ -1217,6 +1231,7 @@
 		<string>../app/models/direction.rb</string>
 		<string>../app/models/region.rb</string>
 		<string>../app/admin/sip_accounts.rb</string>
+		<string>../config/database.yml</string>
 		<string>../app/models/admin_user.rb</string>
 		<string>../app/models/sip_account.rb</string>
 		<string>../app/models/context.rb</string>

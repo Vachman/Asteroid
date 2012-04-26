@@ -32,6 +32,7 @@ ActiveAdmin.register SipAccount do
      f.input :deny, :label => "Запрещенные адреса"
      f.input :nat, :label => "NAT"
      f.input :call_limit, :label => "Количество линий"
+     f.input :dtmfmode, :label => "DTMF", :as => :select, :collection => ["auto", "rfc2833", "inband"]
    end
    f.buttons
   end
@@ -47,6 +48,7 @@ ActiveAdmin.register SipAccount do
         row("Разрешенные адреса") { sip_account.permit }
         row("Контекст") { sip_account.context }
         row("Имя подключенного устройства") { sip_account.useragent }
+        row("DTMF") { sip_accounts.dtmfmode }
       end
     end
     
