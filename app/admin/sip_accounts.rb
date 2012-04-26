@@ -27,10 +27,10 @@ ActiveAdmin.register SipAccount do
      f.input :context, :label => "Контекст"
      f.input :secret, :label => "Пароль"
      f.input :host, :label => "Хост"
-     f.input :allow, :label => "Кодеки"
+     f.input :allow, :label => "Кодеки", :as => :select, :collection => ["alaw;g729;gsm", "alaw;gsm"]
      f.input :permit, :label =>"Разрешенные адреса"
      f.input :deny, :label => "Запрещенные адреса"
-     f.input :nat, :label => "NAT"
+     f.input :nat, :label => "NAT", :as => :select, :collection => ["yes", "no"]
      f.input :call_limit, :label => "Количество линий"
      f.input :dtmfmode, :label => "DTMF", :as => :select, :collection => ["auto", "rfc2833", "inband"]
    end
