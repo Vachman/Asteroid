@@ -22,12 +22,13 @@ ActiveAdmin.register SipAccount do
   form do |f|
     f.inputs do
      f.input :phone, :label => "АОН"
+     f.input :accountcode, :label => "ID учетной записи", :as => :select, :collection => Phone.find(:all)
      f.input :name, :label => "Имя"
      f.input :username, :label => "Логин"
      f.input :context, :label => "Контекст"
      f.input :secret, :label => "Пароль"
      f.input :host, :label => "Хост"
-     f.input :allow, :label => "Кодеки", :as => :select, :collection => ["alaw;g729;gsm", "alaw;gsm"]
+     f.input :allow, :label => "Кодеки", :as => :select, :collection => ["g729;alaw", "alaw;g729", "gsm" ]
      f.input :permit, :label =>"Разрешенные адреса"
      f.input :deny, :label => "Запрещенные адреса"
      f.input :nat, :label => "NAT", :as => :select, :collection => ["yes", "no"]
@@ -44,11 +45,10 @@ ActiveAdmin.register SipAccount do
         row("Статус") { status_tag sip_account.status, sip_account.status_tag }
       end
         attributes_table_for sip_account do
+        row("ID учетной записи") { sip_account.accountcode }
         row("Имя линии") { sip_account.name }
-        row("Разрешенные адреса") { sip_account.permit }
         row("Контекст") { sip_account.context }
-        row("Имя подключенного устройства") { sip_account.useragent }
-        row("DTMF") { sip_accounts.dtmfmode }
+        row("Кодеки") { sip_account.allow }
       end
     end
     

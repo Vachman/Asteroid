@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120227193017) do
+ActiveRecord::Schema.define(:version => 20120711072152) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -227,6 +227,7 @@ ActiveRecord::Schema.define(:version => 20120227193017) do
     t.string   "account_type"
     t.integer  "client_id"
     t.integer  "phone_id"
+    t.string   "accountcode"
   end
 
   add_index "sip_accounts", ["name"], :name => "index_sip_accounts_on_name", :unique => true
