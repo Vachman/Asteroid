@@ -15,14 +15,14 @@ ActiveAdmin.register SipAccount do
   index do
     column "Номер", :name 
     column ("Клиент") { |sip_account| sip_account.phone.client.name if sip_account.phone and sip_account.phone.client }
-    column ("Статус") { |sip_account| status_tag sip_account.status, sip_account.status_tag  } 
+    #column ("Статус") { |sip_account| status_tag sip_account.status, sip_account.status_tag  } 
     default_actions
   end
   
   form do |f|
     f.inputs do
      f.input :phone, :label => "АОН"
-     f.input :accountcode, :label => "ID учетной записи", :as => :select, :collection => Phone.find(:all)
+     #f.input :accountcode, :label => "ID учетной записи", :as => :select, :collection => Phone.find(:all)
      f.input :name, :label => "Имя"
      f.input :username, :label => "Логин"
      f.input :context, :label => "Контекст"
@@ -42,10 +42,10 @@ ActiveAdmin.register SipAccount do
     panel "Подробности" do
       attributes_table_for sip_account do
         row("Клиент") { sip_account.phone.client.name if sip_account.phone and sip_account.phone.client }
-        row("Статус") { status_tag sip_account.status, sip_account.status_tag }
+       # row("Статус") { status_tag sip_account.status, sip_account.status_tag }
       end
         attributes_table_for sip_account do
-        row("ID учетной записи") { sip_account.accountcode }
+        #row("ID учетной записи") { sip_account.accountcode }
         row("Имя линии") { sip_account.name }
         row("Контекст") { sip_account.context }
         row("Кодеки") { sip_account.allow }
