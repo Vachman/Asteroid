@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../app/admin/clients.rb</string>
+	<string>../app/admin/sip_accounts.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -49,7 +49,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>19</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
@@ -216,30 +216,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>36</integer>
 				<key>line</key>
-				<integer>16</integer>
+				<integer>15</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>7</integer>
-				<key>line</key>
-				<integer>18</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>4</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
 		</dict>
 		<key>../app/admin/regions.rb</key>
 		<dict>
@@ -260,14 +244,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>45</integer>
+				<integer>104</integer>
 				<key>line</key>
-				<integer>46</integer>
+				<integer>30</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>19</integer>
+			<integer>18</integer>
 		</dict>
 		<key>../app/controllers/application_controller.rb</key>
 		<dict>
@@ -584,30 +568,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>5</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>8</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
 				<integer>34</integer>
 				<key>line</key>
 				<integer>5</integer>
 			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>5</integer>
-			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>18</integer>
 		</dict>
 		<key>../app/views/clients/_form.html.erb</key>
 		<dict>
@@ -947,6 +915,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../db/migrate/20110927094825_add_company_id_to_sip_accounts.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../db/migrate/20111110140152_add_blocked_to_phones.rb</key>
 		<dict>
 			<key>caret</key>
@@ -1151,6 +1133,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../db/migrate/20120213083204_create_operator_contacts.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>50</integer>
+				<key>line</key>
+				<integer>11</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../db/migrate/20120220071550_add_date_to_clients.rb</key>
 		<dict>
 			<key>caret</key>
@@ -1225,6 +1221,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../db/migrate/20120711072152_add_account_code_to_sip_accounts.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>45</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../public/stylesheets/jquery-ui-1.8.11.custom.css</key>
 		<dict>
 			<key>caret</key>
@@ -1263,7 +1273,6 @@
 		<string>../config/initializers/secret_token.rb</string>
 		<string>../config/initializers/session_store.rb</string>
 		<string>../config/routes.rb</string>
-		<string>../db/migrate/20120227193017_add_mac_to_devices.rb</string>
 		<string>../db/migrate/20120213070501_create_operators.rb</string>
 		<string>../app/models/operator.rb</string>
 		<string>../app/admin/operators.rb</string>
@@ -1295,6 +1304,10 @@
 		<string>../app/models/direction.rb</string>
 		<string>../app/models/region.rb</string>
 		<string>../app/admin/sip_accounts.rb</string>
+		<string>../db/migrate/20120711072152_add_account_code_to_sip_accounts.rb</string>
+		<string>../db/migrate/20120213083204_create_operator_contacts.rb</string>
+		<string>../db/migrate/20120227193017_add_mac_to_devices.rb</string>
+		<string>../db/migrate/20110927094825_add_company_id_to_sip_accounts.rb</string>
 		<string>../config/database.yml</string>
 		<string>../app/models/admin_user.rb</string>
 		<string>../app/models/sip_account.rb</string>

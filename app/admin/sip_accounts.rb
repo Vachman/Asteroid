@@ -28,7 +28,7 @@ ActiveAdmin.register SipAccount do
      f.input :context, :label => "Контекст"
      f.input :secret, :label => "Пароль"
      f.input :host, :label => "Хост"
-     f.input :allow, :label => "Кодеки", :as => :select, :collection => ["g729;alaw", "alaw;g729", "gsm" ]
+     f.input :allow, :label => "Кодеки", :as => :select, :collection => ["g729;alaw", "alaw;g729", "g729", "gsm" ]
      f.input :permit, :label =>"Разрешенные адреса"
      f.input :deny, :label => "Запрещенные адреса"
      f.input :nat, :label => "NAT", :as => :select, :collection => ["yes", "no"]
