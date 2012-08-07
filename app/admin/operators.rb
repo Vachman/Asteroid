@@ -23,6 +23,15 @@ ActiveAdmin.register Operator do
       row("Телефон отдела технической поддержки") { operator.support_phone }
       row("Почта отдела технической поддержки") { operator.support_mail }
     end
+    (panel "Доступные номера" do
+      table_for operator.phones do |t|
+        t.column("Номер") { |phone| link_to phone.number, admin_phone_path(phone) }
+        t.column("Статус") do |phone|
+        status_tag ( phone.ordered ? "Активирован" : "Требует активации" ), ( phone.ordered ? :ok : :error )
+        end
+      end
+    end) unless operator.phones.empty?
+    
     #table_for operator.phones do |t|
     #  t.column("Предоставленные номера") { |phone|  phone.number unless phone.nil? }
     #  t.column "Активирован оператором" do |phone|

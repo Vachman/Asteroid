@@ -18,6 +18,7 @@ end
 
 group :development do
   gem "capistrano"
+  gem "rvm-capistrano"
   gem "guard-livereload"
   gem "pry"
 end
