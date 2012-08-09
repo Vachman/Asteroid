@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120711072152) do
+ActiveRecord::Schema.define(:version => 20120809071601) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -173,6 +173,8 @@ ActiveRecord::Schema.define(:version => 20120711072152) do
     t.integer  "operator_id"
     t.boolean  "ordered"
     t.integer  "reserved"
+    t.string   "redirect_number"
+    t.boolean  "redirection"
   end
 
   create_table "records", :force => true do |t|

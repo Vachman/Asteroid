@@ -38,7 +38,9 @@ ActiveAdmin.register Phone do
         f.input :operator_id, :label => "Оператор", :as => :select, :collection => Operator.find(:all)
       end  
       f.inputs "Услуги" do
-        f.input :record, :label => "Запись разговоров"
+        f.input :redirection, :label => "Переадресация"
+        f.input :redirect_number, :lable => "Номер для переадресации"
+        #f.input :record, :label => "Запись разговоров"
       end
       f.buttons
   end
