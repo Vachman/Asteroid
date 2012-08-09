@@ -61,7 +61,7 @@ ActiveAdmin.register Phone do
     end
     
     attributes_table do
-     row("Запись разговоров") { status_tag ( phone.record ? "Включена" : "Выключена" ), ( phone.record ? :ok : :error ) }
+     row("Запись разговоров") { status_tag ( phone.redirection ? "Включена" : "Выключена" ), ( phone.redirection ? :ok : :error ) }
     end
     active_admin_comments
   end
