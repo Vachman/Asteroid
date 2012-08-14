@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../app/admin/device_types.rb</string>
+	<string>../app/admin/phones.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -40,30 +40,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>27</integer>
+				<integer>52</integer>
 				<key>line</key>
-				<integer>36</integer>
+				<integer>64</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>18</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>37</integer>
-				<key>line</key>
-				<integer>36</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>27</integer>
-				<key>line</key>
-				<integer>36</integer>
-			</dict>
+			<integer>33</integer>
 		</dict>
 		<key>../app/admin/dashboards.rb</key>
 		<dict>
@@ -186,30 +170,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>107</integer>
+				<integer>61</integer>
 				<key>line</key>
-				<integer>21</integer>
+				<integer>64</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>7</integer>
-				<key>line</key>
-				<integer>21</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>107</integer>
-				<key>line</key>
-				<integer>21</integer>
-			</dict>
+			<integer>36</integer>
 		</dict>
 		<key>../app/admin/records.rb</key>
 		<dict>
@@ -950,30 +918,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>2</integer>
+				<integer>5</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>42</integer>
-				<key>line</key>
-				<integer>2</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>4</integer>
-				<key>line</key>
-				<integer>2</integer>
-			</dict>
 		</dict>
 		<key>../db/migrate/20120120141624_create_device_types.rb</key>
 		<dict>
@@ -1242,9 +1194,39 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>45</integer>
+				<integer>4</integer>
 				<key>line</key>
 				<integer>2</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>51</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>4</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
+		<key>../db/migrate/20120809071601_add_redirect_to_phones.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>46</integer>
+				<key>line</key>
+				<integer>3</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -1302,6 +1284,7 @@
 		<string>../db/migrate/20120120141911_create_devices.rb</string>
 		<string>../db/migrate/20120123114150_add_price_to_device_type.rb</string>
 		<string>../app/admin/device_types.rb</string>
+		<string>../db/migrate/20120809071601_add_redirect_to_phones.rb</string>
 		<string>../db/migrate/20120122135734_change_mistake.rb</string>
 		<string>../db/migrate/20120120142150_add_client_id_to_devices.rb</string>
 		<string>../app/models/device_type.rb</string>

@@ -38,8 +38,13 @@ ActiveAdmin.register Phone do
         f.input :operator_id, :label => "Оператор", :as => :select, :collection => Operator.find(:all)
       end  
       f.inputs "Услуги" do
-        f.input :redirection, :label => "Переадресация"
+        f.input :redirection, :label => "Безусловная переадресация"
         f.input :redirect_number, :lable => "Номер для переадресации"
+        f.input :timeout, :lable => "Таймаут"
+        f.input :congestion, :lable => "При перегрузке"
+        f.input :chanunavail, :lable => "При проблемах в сети"
+        f.input :noanswer, :lable => "При длительном отсутствии ответа"
+        f.input :busy, :lable => "При занятой линии"
         #f.input :record, :label => "Запись разговоров"
       end
       f.buttons
@@ -61,7 +66,11 @@ ActiveAdmin.register Phone do
     end
     
     attributes_table do
-     row("Переадресация") { status_tag ( phone.redirection ? "Включена" : "Выключена" ), ( phone.redirection ? :ok : :error ) }
+     row("Безусловная переадресация") { status_tag ( phone.redirection ? "Включена" : "Выключена" ), ( phone.redirection ? :ok : :error ) }
+     row("Переадресация при перегрузке канала") { status_tag ( phone.congestion ? "Включена" : "Выключена" ), ( phone.congestion ? :ok : :error ) }
+     row("Переадресация при проблемах в сети") { status_tag ( phone.chanunavail ? "Включена" : "Выключена" ), ( phone.chanunavail ? :ok : :error ) }
+     row("Переадресация при длительном отсутствии ответа") { status_tag ( phone.noanswer ? "Включена" : "Выключена" ), ( phone.noanswer ? :ok : :error ) }
+     row("Переадресация при занятой линии") { status_tag ( phone.busy ? "Включена" : "Выключена" ), ( phone.busy ? :ok : :error ) }
      row("Номер для переадресации") { phone.redirect_number }
     end
     active_admin_comments
