@@ -40,7 +40,7 @@ ActiveAdmin.register Phone do
       f.inputs "Услуги" do
         f.input :redirection, :label => "Безусловная переадресация"
         f.input :redirect_number, :label => "Номер для переадресации вида 8xxxxxxxxxx"
-        f.input :timeout, :label => "Таймаут"
+        f.input :timeout, :label => "Таймаут не более 60 секунд (сек.)"
         f.input :congestion, :label => "При перегрузке"
         f.input :chanunavail, :label => "При проблемах в сети"
         f.input :noanswer, :label => "При длительном отсутствии ответа"
